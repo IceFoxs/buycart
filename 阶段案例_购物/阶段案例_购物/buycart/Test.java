@@ -24,6 +24,11 @@ public class Test {
 		
 		BuyCart cart = new BuyCart();
 		cart.setItems(items);
+		Item item09 = new Item(p2 , 3);
+		Item item07 = new Item(p2 , 3);
+		Item item08 = new Item(p1 , 4);
+		Item[] item1= {item07,item09,item08};
+		cart.addItems(item1);
 		//做处理  , 　多余的让其加数量　　　减少项
 //	    cart.handler();
 //		cart.clearBuyCartRepeat();
