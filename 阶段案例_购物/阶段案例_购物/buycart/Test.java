@@ -3,10 +3,8 @@ package buycart;
 public class Test {
 	
 	public static void main(String[] args) {
-		
 		Product p1 = new Product(1, "Java从入门到精通", 100);
 		Product p2 = new Product(2, "iphone 8", 10);
-		
 		Customer c1 = new Customer();
 		c1.setId(1);
 		c1.setName("tom");
@@ -21,7 +19,6 @@ public class Test {
 		Item item04 = new Item(p2 , 1);
 		Item item05 = new Item(p1 , 5 );
 		Item[] items = {item01 , item02 ,item06 , item03, item04,item05};
-		
 		BuyCart cart = new BuyCart();
 		cart.setItems(items);
 		Item item09 = new Item(p2 , 3);
@@ -35,7 +32,6 @@ public class Test {
 		//////////////////////
 		//查看购物车
 		cart.showBuyCart();
-		
 		////////////////////
 		//生成订单   留给大家.....
 		

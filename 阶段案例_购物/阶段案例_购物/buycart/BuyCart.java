@@ -43,7 +43,6 @@ public class BuyCart {
 				}
 			}
 		}
-		System.out.println(count);
 		//新数组 的长度
 		int newLength = items.length - count;
 		//创建一个新的数组

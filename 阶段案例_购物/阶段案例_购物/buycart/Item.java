@@ -38,7 +38,6 @@ public class Item {
 		Item item02 = (Item) obj;
 		if(obj==null)return false;
 		if (item01.getProduct().getId() == item02.getProduct().getId()) {
-//			System.out.println("Ò»Ñש");
 			return true;
 		} else {
 			return false;
