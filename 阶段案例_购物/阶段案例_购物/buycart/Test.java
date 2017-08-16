@@ -1,9 +1,11 @@
 package buycart;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Test {
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Product p1 = new Product(1, "Java从入门到精通", 100);
 		Product p2 = new Product(2, "iphone 8", 10);
@@ -28,14 +30,7 @@ public class Test {
 		Item item08 = new Item(p1 , 4);
 		Item[] item1= {item07,item09,item08};
 		cart.addItems(item1);
-		//做处理  , 　多余的让其加数量　　　减少项
-        //	    cart.handler();
-        //		cart.clearBuyCartRepeat();
-		//////////////////////
-		//查看购物车
 		cart.showBuyCart();
-		////////////////////
-		//生成订单   留给大家.....
 		OrdersHandler oh=new OrdersHandler();
 		Orders orders=oh.orderHander("1215645388598", new Date(), c1.getRecInfos(),cart);
 		oh.showOrder(orders);
