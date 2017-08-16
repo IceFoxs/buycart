@@ -9,23 +9,22 @@ public class BuyCart {
 	public Item[] getItems() {
 		return items;
 	}
-	
 	public void setItems(Item[] items) {
 		this.items = items;
 		handler();
 		}
 	public void addItems(Item[] items) {
-		if(this.items==null) {
-			this.items=items;
+			if(this.items==null) {
+				this.items=items;
+				
+			}
+			else {   
+				Item[] newArr = new  Item[this.items.length+items.length];
+				System.arraycopy(this.items, 0, newArr, 0, this.items.length);
+				System.arraycopy(items,0, newArr,this.items.length,items.length);
+				this.items=newArr;
+			  }
 			handler();
-		}
-		else {   
-				 Item[] newArr = new  Item[this.items.length+items.length];
-				 System.arraycopy(this.items, 0, newArr, 0, this.items.length);
-				 System.arraycopy(items,0, newArr,this.items.length,items.length);
-				 this.items=newArr;
-				 handler();
-		  }
 		}
 	//
 //	public void handler() {
@@ -50,11 +49,10 @@ public class BuyCart {
 			}
 		}
 		//新数组 的长度
-		int newLength = items.length - count;
+		int newLength = items.length-count;
 		//创建一个新的数组
-		 Item[] newArr = new  Item[newLength];
+		 Item[] newArr = new Item[newLength];
 		int index = 0 ; 	//新数组的索引值
-        
 		//遍历旧数组
 		for(int i = 0  ; i< items.length ; i++){
 			Item temp = items[i];  //旧数组中的元素 
@@ -71,10 +69,9 @@ public class BuyCart {
 				newArr[index++] = temp;	
 			}
 		}
-		items=newArr;
+		this.items=newArr;
 	}
 	public void showBuyCart() {
-
 		for (Item item : items) {
 			System.out.println(item);
 		}
