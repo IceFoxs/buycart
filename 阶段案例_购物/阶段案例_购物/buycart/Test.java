@@ -1,5 +1,7 @@
 package buycart;
 
+import java.util.Date;
+
 public class Test {
 	
 	public static void main(String[] args) {
@@ -27,15 +29,16 @@ public class Test {
 		Item[] item1= {item07,item09,item08};
 		cart.addItems(item1);
 		//做处理  , 　多余的让其加数量　　　减少项
-//	    cart.handler();
-//		cart.clearBuyCartRepeat();
+        //	    cart.handler();
+        //		cart.clearBuyCartRepeat();
 		//////////////////////
 		//查看购物车
 		cart.showBuyCart();
 		////////////////////
 		//生成订单   留给大家.....
-		
-		
+		OrdersHandler oh=new OrdersHandler();
+		Orders orders=oh.orderHander("2654556456454545", new Date(), c1.getRecInfos(),cart);
+		oh.showOrder(orders);
 		
 	}
 	

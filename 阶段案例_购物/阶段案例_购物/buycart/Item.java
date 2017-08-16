@@ -34,9 +34,9 @@ public class Item {
 	// 判断两个产品是否一样
 	@Override
 	public boolean equals(Object obj) {
+		if(obj==null)return false;
 		Item item01 = this;
 		Item item02 = (Item) obj;
-		if(obj==null)return false;
 		if (item01.getProduct().getId() == item02.getProduct().getId()) {
 			return true;
 		} else {

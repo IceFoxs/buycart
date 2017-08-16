@@ -2,14 +2,11 @@ package buycart;
 
 import java.util.Date;
 
-public class Orders {
-	
+public class Orders {	
 	private String oid;
 	private Date date;
-	
 	private RecInfo recInfo;
 	private BuyCart buyCart;
-	
 	public Orders(String oid, Date date, RecInfo recInfo, BuyCart buyCart) {
 		this.oid = oid;
 		this.date = date;
