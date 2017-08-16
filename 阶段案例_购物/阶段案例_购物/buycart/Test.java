@@ -37,7 +37,7 @@ public class Test {
 		////////////////////
 		//生成订单   留给大家.....
 		OrdersHandler oh=new OrdersHandler();
-		Orders orders=oh.orderHander("2654556456454545", new Date(), c1.getRecInfos(),cart);
+		Orders orders=oh.orderHander("1215645388598", new Date(), c1.getRecInfos(),cart);
 		oh.showOrder(orders);
 		
 	}
