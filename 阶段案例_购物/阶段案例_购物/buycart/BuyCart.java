@@ -15,11 +15,17 @@ public class BuyCart {
 		handler();
 		}
 	public void addItems(Item[] items) {
-		 Item[] newArr = new  Item[this.items.length+items.length];
-		 System.arraycopy(this.items, 0, newArr, 0, this.items.length);
-		 System.arraycopy(items,0, newArr,this.items.length,items.length);
-		 this.items=newArr;
-		 handler();
+		if(this.items==null) {
+			this.items=items;
+			handler();
+		}
+		else {   
+				 Item[] newArr = new  Item[this.items.length+items.length];
+				 System.arraycopy(this.items, 0, newArr, 0, this.items.length);
+				 System.arraycopy(items,0, newArr,this.items.length,items.length);
+				 this.items=newArr;
+				 handler();
+		  }
 		}
 	//
 //	public void handler() {

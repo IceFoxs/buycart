@@ -24,12 +24,13 @@ public class Test {
 		Item item05 = new Item(p1 , 5 );
 		Item[] items = {item01 , item02 ,item06 , item03, item04,item05};
 		BuyCart cart = new BuyCart();
-		cart.setItems(items);
+		//cart.setItems(items);
 		Item item09 = new Item(p2 , 3);
 		Item item07 = new Item(p2 , 3);
 		Item item08 = new Item(p1 , 4);
 		Item[] item1= {item07,item09,item08};
 		cart.addItems(item1);
+		cart.addItems(items);
 		cart.showBuyCart();
 		OrdersHandler oh=new OrdersHandler();
 		Orders orders=oh.orderHander("1215645388598", new Date(), c1.getRecInfos(),cart);

@@ -1,5 +1,6 @@
 package buycart;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -15,19 +16,20 @@ public class OrdersHandler {
 		Orders orders  = new Orders(oid,date,recInfo,buyCart);
 		return orders;
 	}
-	@SuppressWarnings("deprecation")
 	public void  showOrder(Orders orders){
 		  System.out.println("订单编号为"+orders.getOid());
 //		  System.out.println("创建日期："+orders.getDate().toString());
-		  Calendar ca=Calendar.getInstance();
-		  ca.setTime(orders.getDate());
-		  System.out.println("创建日期："+ca.get(Calendar.YEAR)+
-				  "年"+(ca.get(Calendar.MONTH)+1)+
-				  "月"+ca.get(Calendar.DAY_OF_MONTH)+
-				  "日"+ca.get(Calendar.HOUR_OF_DAY)+
-				  "点"+ca.get(Calendar.MINUTE)+"分"
-				  +ca.get(Calendar.SECOND)+"秒"
-				  );
+		  SimpleDateFormat  dateFormat = new SimpleDateFormat("yyyy年MM月dd日HH点mm分ss秒");
+		  System.out.println("创建日期："+dateFormat.format(orders.getDate()));
+//		  Calendar ca=Calendar.getInstance();
+//		  ca.setTime(orders.getDate());
+//		  System.out.println("创建日期："+ca.get(Calendar.YEAR)+
+//				  "年"+(ca.get(Calendar.MONTH)+1)+
+//				  "月"+ca.get(Calendar.DAY_OF_MONTH)+
+//				  "日"+ca.get(Calendar.HOUR_OF_DAY)+
+//				  "点"+ca.get(Calendar.MINUTE)+"分"
+//				  +ca.get(Calendar.SECOND)+"秒"
+//				  );
 		  if(orders.getRecInfo()!=null) {
 			  System.out.println("收件人姓名："+orders.getRecInfo().getRecName()
 					             +"   收件人地址"+orders.getRecInfo().getAddr());
