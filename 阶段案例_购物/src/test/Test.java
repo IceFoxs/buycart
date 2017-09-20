@@ -5,7 +5,7 @@ public class Test {
     	  String str="c++javajavacjava++ccc++c++java";
     	  System.out.println(find(str,"java"));
       }
-      public static int find(String src,String des) {
+  public static int find(String src,String des) {
     	  int count=0;
     	  if(src!=null) {
     		  int index=src.indexOf(des);
